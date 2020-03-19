@@ -1,5 +1,8 @@
 package cn.chendahai.controller;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +22,7 @@ public class TestController {
         map.put("message", "这是测试的内容。。。");
         map.put("toUserName", "张三1");
         map.put("fromUserName", "老许");
+        map.put("time", System.currentTimeMillis());
         return "index";
     }
 
@@ -27,8 +31,19 @@ public class TestController {
         map.put("message", "这是测试的内容。。。");
         map.put("toUserName", "张三1");
         map.put("fromUserName", "老许");
+        map.put("time", System.currentTimeMillis());
         int i = 1 / 0;
         return "index";
+    }
+
+    @RequestMapping("/demo3")
+    public String demo3(Map map) {
+        List<String> strings = new ArrayList<>();
+        strings.add("a");
+        strings.add("b");
+        strings.add("c");
+        map.put("strings", strings);
+        return "index3";
     }
 
 }
