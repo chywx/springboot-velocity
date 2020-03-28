@@ -1,6 +1,7 @@
 package cn.chendahai.exception;
 
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,9 +19,9 @@ public class VelocityExceptionHander {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public String exceptionHandler(Exception e) {
+    public String exceptionHandler(Exception e, HttpServletRequest request) {
         System.out.println("未知异常！原因是:" + e);
-//        e.printStackTrace();
+        request.setAttribute("msg", e);
         return "500";
     }
 

@@ -26,6 +26,7 @@ public class TestController {
         return "index";
     }
 
+    // 出异常走全局异常处理，跳转到error页面
     @RequestMapping("/demo2")
     public String demo2(Map map) {
         map.put("message", "这是测试的内容。。。");
