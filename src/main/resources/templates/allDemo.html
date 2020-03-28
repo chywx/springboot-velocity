@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>velocity test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h1>字符串类型</h1>
+$!msg
+
+<h1>if标签</h1>
+#if($sex == 'man')
+男
+#else
+女
+#end
+
+<h1>set操作(定义变量)</h1>
+#set($hw = 'ok')
+$hw
+
+
+<h1>普通for循环</h1>
+#foreach($s in $strings)
+$s &nbsp;
+#end
+
+<h1>对象for循环</h1>
+#foreach($sport in $sportList)
+$sport.name &nbsp;
+#end
+
+
+<h1>map for循环</h1>
+#foreach($sp in $sportMap.keySet())
+
+$sp &nbsp; $sportMap.get($sp).name &nbsp;<br>
+
+#end
+
+
+<h1>日期处理</h1>
+
+处理前：${time}
+<br>
+处理后：$!DateTool.format($time)
+
+</body>
+</html>
