@@ -9,11 +9,11 @@
 
 亲爱的${toUserName}，你好！
 
-${message}
+    $!{message}
 
 祝：开心！
-${fromUserName}
-${time}
-$!DateTool.format($time)
+    $!{fromUserName}
+    $!{time}
+    $!DateTool.format($time)
 </body>
 </html>

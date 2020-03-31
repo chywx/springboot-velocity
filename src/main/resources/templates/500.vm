@@ -7,6 +7,6 @@
 <body>
 error
 <br>
-$msg
+    $!msg
 </body>
 </html>
