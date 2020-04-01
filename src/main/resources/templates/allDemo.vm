@@ -42,5 +42,17 @@
 <br>
 处理后：$!DateTool.format($!time)
 
+<h1>计算加减乘除</h1>
+
+    #set($jia = $amount + 10)
++10= $jia   <br>
+    #set($jian = $amount - 10)
+-10= $jian  <br>
+    #set($cheng = $amount * 10)
+×10= $cheng <br>
+    #set($chu = $amount / 10)
+÷10= $chu   <br>
+
+
 </body>
 </html>

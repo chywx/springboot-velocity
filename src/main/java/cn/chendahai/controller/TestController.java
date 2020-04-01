@@ -42,6 +42,7 @@ public class TestController {
     // velocity常用语法汇总
     @RequestMapping("/allDemo")
     public String demo3(Map map) {
+        map.put("amount", 100);
         map.put("msg", "dahai");
         map.put("sex", "man");
         putString(map);
