@@ -6,14 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-
-亲爱的${toUserName}，你好！
-
     $!{message}
-
-祝：开心！
-    $!{fromUserName}
     $!{time}
-    $!DateTool.format($time)
 </body>
 </html>
