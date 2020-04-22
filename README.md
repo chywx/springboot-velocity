@@ -1,5 +1,5 @@
 ## springboot版本
-`1.4.2.RELEASE` 这是支持velocity的最高版本。。。后续版本不支持
+`1.4.7.RELEASE` 这是支持velocity的最高版本。。。后续版本不支持
 > 个人demo整合
 
 ## 原因
